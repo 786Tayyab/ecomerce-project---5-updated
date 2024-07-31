@@ -1,0 +1,422 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* all similar content styling codes */
+
+.max-width{
+    max-width: 600px;
+    margin-right: 25%;
+}
+/* ^^^^^^custom scroll END^^^^^^ bar */
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    .navbarbrand
+}
+.navbar .navbarbr{
+margin-left: 1%;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: crimson;
+}
+nav .ca{
+    position: fixed;
+    right: 60px;
+    top: 20px;
+    margin-right: 20px;
+    width: 50px;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+    @media (max-width: 991px) {
+        nav .ca {
+        margin-right: 50px;
+            } }
+
+
+            .navbar .logo a{
+                color: #fff;
+                font-size: 35px;
+                font-weight: 600;
+            }
+            .navbar .logo a span{
+                color: crimson;
+                transition: all 0.3s ease;
+            }
+            .navbar .menu li{
+                list-style: none;
+                display: inline-block;
+            }
+            .navbar .menu li a{
+                display: block;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+                margin-left: 25px;
+                transition: color 0.3s ease;
+            }
+            .navbar .menu li a:hover{
+                color: dodgerblue;
+            }
+            .navbar.sticky .menu li a:hover{
+                color: dodgerblue;
+            }
+            
+            /* menu btn styling */
+            .menu-btn{
+                color: #fff;
+                font-size: 23px;
+                cursor: pointer;
+                display: none;
+            }
+            .scroll-up-btn{
+                position: fixed;
+                height: 45px;
+                width: 42px;
+                background: #1BE7FF;
+                right: 30px;
+                bottom: 10px;
+                text-align: center;
+                line-height: 45px;
+                color: #fff;
+                z-index: 9999;
+                font-size: 30px;
+                border-radius: 6px;
+                border-bottom-width: 2px;
+                cursor: pointer;
+                opacity: 0;
+                pointer-events: none;
+                transition: all 0.3s ease;
+            }
+            .scroll-up-btn.show{
+                bottom: 30px;
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .scroll-up-btn:hover{
+                filter: brightness(80%);
+            }
+
+            
+@media (max-width: 947px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        margin-right: 5%;
+        z-index: 0;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }}
+/* *******r**********hero section************************ */
+
+.hero-section {
+    margin-top: 70px;
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    animation: slide 15s infinite;
+}
+
+.hero-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slide {
+    0% { background-image: url('images/image1.jpg'); }
+    22% { background-image: url('images/image2.jpg'); }
+    44% { background-image: url('images/image5.jpg'); }
+    66% { background-image: url('images/image6.jpg'); }
+    88% { background-image: url('images/image9.jpg'); }
+    100% { background-image: url('images/image10.jpg'); }
+}
+/* *******r**********hero section end************************ */
+
+.container{
+    margin-top: 10%;
+    text-align: center;
+}
+.container h2{
+margin-top: 50px;
+}
+.container hr{
+max-width: 10%;
+height: auto;
+margin-top: 30px;
+border-bottom: 3px solid #1BE7FF;
+}
+.container .Categoriestwo, .CategoriestwoWC{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 5%;
+}
+.container .groceryContent, .clothingContent, .cosmeticsContent {
+    margin-top: 5%;
+    max-width: 25%; 
+    height: auto;
+    border-radius: 5%;
+    cursor: pointer;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.container .grocery, .clothing, .cosmetics {
+    margin-top: 60px;
+}
+@media (max-width: 600px) {
+    .container .groceryContent, .clothingContent, 
+    .cosmeticsContent {
+        max-width: 30%; 
+        height: auto;
+        border-radius: 10%;
+        cursor: pointer;
+        margin: auto;
+        padding: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        } }
+
+.container img{
+    max-width: 100%; 
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.container img:hover{
+    transform: scale(1.1);
+}
+/* *******r********** Why Choose Us ************************ */
+
+.groceryContentWC .iconn {
+    margin-top: 30px;
+    max-width: 38%;
+    height: auto;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.2);
+}
+.clothingContentWC i, .cosmeticsContentWC i{
+    margin-top: 30px;
+    color: #35ba52;
+    font-size: 60px;
+}
+.container .groceryContentWC, .clothingContentWC, .cosmeticsContentWC {
+    max-width: 25%; 
+    height: auto;
+    border-radius: 5%;
+}
+.container .groceryContentWC h5:hover, .clothingContentWC h5:hover, .cosmeticsContentWC h5:hover {
+    color: #35ba52;
+}
+        @media (max-width: 600px) {
+            .CategoriestwoWC{
+                display: block;
+                } 
+            .CategoriestwoWC .groceryContentWC, .clothingContentWC, .cosmeticsContentWC {
+                max-width: 50%;
+                height: auto; 
+                margin: auto;
+                padding: auto;
+            }
+            }
+/* *******r********** Why Choose Us END************************ */
+/* *******r********** contact ************************ */
+/* General Styles */
+.support {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #99ebff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header and Paragraph */
+.support h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    position: relative;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.support p {
+    color: #777;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    position: relative;
+    animation: slideInFromRight 1s ease-out;
+}
+
+/* Form and Inputs */
+.form-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    color: #555;
+    margin-bottom: 5px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Adding a background animation */
+.support::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,123,255,0.1), rgba(255,193,7,0.1));
+    z-index: -1;
+    animation: backgroundMove 5s infinite alternate;
+    border-radius: 12px;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* *******r********** contact END************************ */
+
+footer {
+    background-color: #f8f9fa;
+}
